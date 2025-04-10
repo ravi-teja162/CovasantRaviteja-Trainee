@@ -15,8 +15,8 @@ class File:
         
     def getLatestFiles(self, date):
         for i in self.folder:
-            self.mtime = datetime.datetime.fromtimestamp(os.path.getmtime(i))
-            if date < self.mtime.date():
+            self.ctime = datetime.datetime.fromtimestamp(os.path.getctime(i))
+            if date < self.ctime.date():
                 self.files_time.append(i)
         return self.files_time
                 
