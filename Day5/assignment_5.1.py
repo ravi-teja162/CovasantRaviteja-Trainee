@@ -9,7 +9,6 @@ class download_all_links:
         self.url = url
         self.path = path
         
-        
         self.original_url_obj = self.html_parse(self.url)
         self.all_links  = self.get_all_links(self.original_url_obj)
         
@@ -33,7 +32,7 @@ class download_all_links:
         print("Started extracting from", link)
         obj = self.html_parse(link)
         
-        #write each obj to file here
+        #writing each obj to different file 
         if obj:
             try:
                 filename = link.replace("https://", "").replace("/", "_")[:20] + ".html"
