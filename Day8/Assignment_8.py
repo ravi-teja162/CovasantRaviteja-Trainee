@@ -43,26 +43,17 @@ def generate_weather_data(city):
         }
     }
 
-
+@app.route("/")
 @app.route("/<string:city>")
 def weather_api(city = None):
     if city is not None:
         weather_data = {city: generate_weather_data(city)}
         data = jsonify(weather_data)
         return data
-        
+    else:
+        return "<h1>Give a city Name in the path Parameter </h1>"
         
 if __name__ == '__main__':
     app.run()
         
         
-
-
-
-
-
-
-
-
-
-
