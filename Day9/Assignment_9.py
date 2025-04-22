@@ -1,7 +1,6 @@
 from fastapi import FastAPI , Request
 from pydantic import BaseModel
 from sqlalchemy import create_engine, text 
-from functools import wraps
 import os
 
 app = FastAPI()
