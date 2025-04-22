@@ -43,7 +43,7 @@ def post_age(name, age):
     
 @app.get("/helloj")
 @app.get("/helloj/{fname}")
-@app.get("/hello/{fname}/{format}")
+@app.get("/helloj/{fname}/{format}")
 def get_data(fname = None, name: str = None, format: str = "json", jsonname: person_search= None):
     try:
         actual_name = fname or name or (jsonname.name if jsonname else "Raviteja")
